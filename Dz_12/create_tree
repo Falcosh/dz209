@@ -1,0 +1,14 @@
+import os
+# print(f"Current working directory: {os.getcwd()}")
+# os.chdir('Dz_12') # при запуске из файла
+# print(f"Current working directory: {os.getcwd()}")
+
+# Создаём корневую папку и переходим в неё
+
+os.makedirs('project_root', exist_ok=True)
+os.chdir('project_root')
+
+# Создаём всю структуру папок
+dirs = ['data/raw', 'data/processed', 'logs', 'backups', 'output']
+for d in dirs:
+    os.makedirs(d, exist_ok=True)

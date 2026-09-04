@@ -1,0 +1,30 @@
+[
+  {
+    "filename": "de_iso88591_processed.txt",
+    "original_text": "Buch: Faust, Autor: Johann Wolfgang von Goethe, Genre: Drama",
+    "processed_text": "bUCH: fAUST, aUTOR: jOHANN wOLFGANG VON gOETHE, gENRE: dRAMA",
+    "size_bytes": 60,
+    "last_modified": "2026-09-03 23:35:47"
+  },
+  {
+    "filename": "en_utf8_processed.txt",
+    "original_text": "Book: The Great Gatsby, Author: F. Scott Fitzgerald, Genre: Fiction",
+    "processed_text": "bOOK: tHE gREAT gATSBY, aUTHOR: f. sCOTT fITZGERALD, gENRE: fICTION",
+    "size_bytes": 67,
+    "last_modified": "2026-09-03 23:35:47"
+  },
+  {
+    "filename": "es_iso88591_processed.txt",
+    "original_text": "Libro: Cien años de soledad, Autor: Gabriel García Márquez, Género: Realismo mágico",
+    "processed_text": "lIBRO: cIEN AÑOS DE SOLEDAD, aUTOR: gABRIEL gARCÍA mÁRQUEZ, gÉNERO: rEALISMO MÁGICO",
+    "size_bytes": 88,
+    "last_modified": "2026-09-03 23:35:47"
+  },
+  {
+    "filename": "ru_utf8_processed.txt",
+    "original_text": "Книга: Мастер и Маргарита, Автор: М. Булгаков, Жанр: Мистика",
+    "processed_text": "кНИГА: мАСТЕР И мАРГАРИТА, аВТОР: м. бУЛГАКОВ, жАНР: мИСТИКА",
+    "size_bytes": 106,
+    "last_modified": "2026-09-03 23:35:47"
+  }
+]
