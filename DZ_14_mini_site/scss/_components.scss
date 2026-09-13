@@ -1,0 +1,8 @@
+@import '_mixins';
+
+// Стили для кнопок
+.button {
+    @include button($primary-color, #fff);
+    display: inline-block;
+    margin: $padding;
+}

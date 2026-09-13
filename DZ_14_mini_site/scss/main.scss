@@ -1,0 +1,10 @@
+@import '_variables';
+@import '_mixins';
+@import '_base';
+@import '_layout';
+@import '_components';
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
