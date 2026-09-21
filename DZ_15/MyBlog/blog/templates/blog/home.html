@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Главная — Мой блог{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>Добро пожаловать в мой блог!</h1>
+    <p>Это простое веб-приложение на Django, где можно создавать, читать,
+       редактировать и удалять записи.</p>
+    <div style="margin-top: 20px; display: flex; gap: 10px;">
+        <a class="btn btn-primary" href="{% url 'post_list' %}">Список постов</a>
+        <a class="btn btn-secondary" href="{% url 'about' %}">О нас</a>
+    </div>
+</div>
+{% endblock %}

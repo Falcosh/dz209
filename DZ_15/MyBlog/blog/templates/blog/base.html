@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мой блог{% endblock %}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f4f9; color: #333; }
+        .navbar {
+            background: #2c3e50; padding: 15px 30px; display: flex;
+            gap: 20px; align-items: center;
+        }
+        .navbar a { color: #ecf0f1; text-decoration: none; font-weight: 600; transition: color 0.2s; }
+        .navbar a:hover { color: #3498db; }
+        .navbar .brand { font-size: 1.3rem; margin-right: auto; }
+        .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        .card {
+            background: #fff; border-radius: 10px; padding: 25px;
+            margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .card h2 { margin-bottom: 10px; }
+        .card h2 a { color: #2c3e50; text-decoration: none; }
+        .card h2 a:hover { color: #3498db; }
+        .meta { color: #7f8c8d; font-size: 0.85rem; margin-bottom: 10px; }
+        .btn {
+            display: inline-block; padding: 10px 20px; border-radius: 6px;
+            text-decoration: none; font-weight: 600; border: none; cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-primary { background: #3498db; color: #fff; }
+        .btn-primary:hover { background: #2980b9; }
+        .btn-danger { background: #e74c3c; color: #fff; }
+        .btn-danger:hover { background: #c0392b; }
+        .btn-secondary { background: #95a5a6; color: #fff; }
+        .btn-secondary:hover { background: #7f8c8d; }
+        .form-control {
+            width: 100%; padding: 10px; margin-bottom: 15px;
+            border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;
+        }
+        .errorlist { color: #e74c3c; margin-bottom: 10px; }
+        .post-content { line-height: 1.7; }
+        .actions { margin-top: 15px; display: flex; gap: 10px; }
+        .actions-form { display: inline; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="brand" href="{% url 'home' %}">Мой блог</a>
+        <a href="{% url 'home' %}">Главная</a>
+        <a href="{% url 'about' %}">О нас</a>
+        <a href="{% url 'post_list' %}">Посты</a>
+        <a href="{% url 'post_create' %}">Создать пост</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

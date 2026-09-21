@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ post.title }} — Мой блог{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>{{ post.title }}</h1>
+    <p class="meta">Создан: {{ post.created_at|date:"d.m.Y H:i" }}
+       · Обновлён: {{ post.updated_at|date:"d.m.Y H:i" }}</p>
+    <p class="post-content">{{ post.content|linebreaks }}</p>
+
+    <div class="actions">
+        <a href="{% url 'post_edit' post.pk %}" class="btn">Редактировать</a>
+        <form action="{% url 'post_delete' post.pk %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Удалить</button>
+        </form>
+        <a class="btn btn-secondary" href="{% url 'post_list' %}">Назад к списку</a>
+    </div>
+</div>
+{% endblock %}

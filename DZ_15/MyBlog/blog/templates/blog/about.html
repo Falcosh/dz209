@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}О нас — Мой блог{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>О проекте</h1>
+    <p>Этот блог создан в рамках изучения Django. Он демонстрирует
+       работу с маршрутами, шаблонами, моделями, формами и CRUD-операциями.</p>
+    <p>Технологии: Python, Django, SQLite, HTML/CSS.</p>
+    <a class="btn btn-primary" href="{% url 'post_list' %}">Перейти к постам</a>
+</div>
+{% endblock %}

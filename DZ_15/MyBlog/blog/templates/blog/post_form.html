@@ -1,0 +1,32 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ title|default:"Создание поста" }} — Мой блог{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>{% if form.instance.pk %}Редактирование поста{% else %}Новый пост{% endif %}</h1>
+
+    <form method="post" novalidate>
+        {% csrf_token %}
+
+        {% if form.errors %}
+            <div class="errorlist">
+                Пожалуйста, исправьте ошибки ниже.
+            </div>
+        {% endif %}
+
+        <label for="{{ form.title.id_for_label }}">Заголовок</label>
+        {{ form.title }}
+        {% if form.title.errors %}<div class="errorlist">{{ form.title.errors }}</div>{% endif %}
+
+        <label for="{{ form.content.id_for_label }}">Содержание</label>
+        {{ form.content }}
+        {% if form.content.errors %}<div class="errorlist">{{ form.content.errors }}</div>{% endif %}
+
+        <div class="actions">
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <a class="btn btn-secondary" href="{% url 'post_list' %}">Отмена</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
